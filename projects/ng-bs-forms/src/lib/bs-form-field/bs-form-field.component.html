@@ -9,7 +9,7 @@
     <input [type]="type" class="form-control" [formControl]="formField" [attr.placeholder]="placeholder" name='{{name}}'
       [ngClass]="{ 'is-invalid': invalid() }" [autofocus]="autoFocus" [id]="id"/>
     <div *ngIf="invalid()" class="invalid-feedback text-left">
-      <ng-content select="app-bs-field-error"></ng-content>
+      <ng-content select="ng-bsf-field-error"></ng-content>
     </div>
   </div>
 </div>

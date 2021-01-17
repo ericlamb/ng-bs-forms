@@ -10,7 +10,7 @@ describe('BsFormFieldComponent', () => {
   @Component({
     selector: `app-host-component`,
     template: `<form [formGroup]="testForm">
-    <app-bs-form-field [formField]="testFormControl"></app-bs-form-field>
+    <ng-bsf-form-field [formField]="testFormControl"></ng-bsf-form-field>
     </form>`
   })
   class TestHostComponent {

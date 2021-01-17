@@ -2,7 +2,7 @@ import { Component, OnInit, Input } from '@angular/core';
 import { FormControl, } from '@angular/forms';
 
 @Component({
-  selector: 'app-bs-form-field',
+  selector: 'ng-bsf-form-field',
   templateUrl: './bs-form-field.component.html',
   styleUrls: ['./bs-form-field.component.scss'],
 })
