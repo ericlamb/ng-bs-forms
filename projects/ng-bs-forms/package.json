@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ericlamb/ns-bs-forms.git"
+    "url": "git+https://github.com/ericlamb/ng-bs-forms.git"
   },
   "keywords": [
     "angular",
@@ -20,7 +20,7 @@
   "author": "Eric Lamb",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/ericlamb/ns-bs-forms/issues"
+    "url": "https://github.com/ericlamb/ng-bs-forms/issues"
   },
-  "homepage": "https://github.com/ericlamb/ns-bs-forms#readme"
+  "homepage": "https://github.com/ericlamb/ng-bs-forms#readme"
 }
