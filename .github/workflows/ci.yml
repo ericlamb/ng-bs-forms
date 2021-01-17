@@ -1,0 +1,27 @@
+name: CI
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v1
+    - name: Setup node
+      uses: actions/setup-node@v1
+      with:
+          node-version: '10.x'
+    - name: Restore npm packages
+      run: npm install
+    - name: Install tslint
+      run: npm install tslint typescript -g
+    - name: Run tslint
+      run: tslint --project .
+    - name: Install Angular
+      run: npm install -g @angular/cli
+    - name: Build package
+      run: ng build ng-bs-forms --prod
+    - name: Run tests
+      run: ng test --watch=false --browsers ChromeHeadless --prod
