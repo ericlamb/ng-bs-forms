@@ -1,11 +1,26 @@
 {
   "name": "ng-bs-forms",
   "version": "0.0.1",
+  "description": "Library for using BootStrap with Angular Reactive Forms.",
   "peerDependencies": {
     "@angular/common": "^11.0.9",
     "@angular/core": "^11.0.9"
   },
   "dependencies": {
     "tslib": "^2.0.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ericlamb/ns-bs-forms.git"
+  },
+  "keywords": [
+    "angular",
+    "bootstrap"
+  ],
+  "author": "Eric Lamb",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ericlamb/ns-bs-forms/issues"
+  },
+  "homepage": "https://github.com/ericlamb/ns-bs-forms#readme"
 }
