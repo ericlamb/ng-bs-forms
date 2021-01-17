@@ -1,3 +1,6 @@
+![CI](https://github.com/ericlamb/ng-bs-forms/workflows/CI/badge.svg)
+![npm (scoped)](https://img.shields.io/npm/v/@ericlamb/ng-bs-forms)
+
 # NgBsForms
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.7.
