@@ -5,13 +5,11 @@ import { FaIconLibrary, FontAwesomeModule } from '@fortawesome/angular-fontaweso
 import { fas } from '@fortawesome/free-solid-svg-icons';
 import { BsFieldErrorComponent } from './bs-field-error/bs-field-error.component';
 import { BsFormFieldComponent } from './bs-form-field/bs-form-field.component';
-import { NgBsFormsComponent } from './ng-bs-forms.component';
 
 
 
 @NgModule({
   declarations: [
-    NgBsFormsComponent,
     BsFieldErrorComponent,
     BsFormFieldComponent,
   ],
@@ -22,7 +20,6 @@ import { NgBsFormsComponent } from './ng-bs-forms.component';
     FontAwesomeModule,
   ],
   exports: [
-    NgBsFormsComponent,
     BsFieldErrorComponent,
     BsFormFieldComponent,
   ]
