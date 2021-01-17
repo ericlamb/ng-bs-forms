@@ -1,5 +1,5 @@
 {
-  "name": "ng-bs-forms",
+  "name": "@ericlamb/ng-bs-forms",
   "version": "0.0.1",
   "description": "Library for using BootStrap with Angular Reactive Forms.",
   "peerDependencies": {
