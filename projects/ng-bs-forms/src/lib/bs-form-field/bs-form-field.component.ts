@@ -18,7 +18,7 @@ export class BsFormFieldComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit() {
+  ngOnInit(): void {
     this.id = '_' + Math.random().toString(36).substr(2, 9);
   }
 

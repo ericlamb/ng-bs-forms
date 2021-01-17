@@ -1,4 +1,4 @@
-import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
+import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { BsFormFieldComponent } from './bs-form-field.component';
 import { FontAwesomeModule, FaIconLibrary } from '@fortawesome/angular-fontawesome';
@@ -31,23 +31,23 @@ describe('BsFormFieldComponent', () => {
     constructor(private componentFixture: ComponentFixture<TestHostComponent>) {
     }
 
-    get input() {
+    get input(): any {
       return this.componentFixture.nativeElement.querySelector(`input`);
     }
 
-    get label() {
+    get label(): any {
       return this.componentFixture.nativeElement.querySelector('label');
     }
 
-    get icon() {
+    get icon(): any {
       return this.componentFixture.nativeElement.querySelector(`div[class="input-group-prepend"]`);
     }
 
-    get validationMessage() {
+    get validationMessage(): any {
       return this.input.parentElement.querySelector('.invalid-feedback');
     }
 
-    get isValid() {
+    get isValid(): any {
       return !this.input.classList.contains('is-invalid');
     }
   }
