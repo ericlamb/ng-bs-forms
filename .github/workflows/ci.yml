@@ -24,4 +24,4 @@ jobs:
     - name: Build package
       run: ng build ng-bs-forms --prod
     - name: Run tests
-      run: ng test --watch=false --browsers ChromeHeadless --prod
+      run: ng test --watch=false --browsers ChromeHeadless
