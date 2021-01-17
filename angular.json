@@ -3,5 +3,46 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-  }
+    "ng-bs-forms": {
+      "projectType": "library",
+      "root": "projects/ng-bs-forms",
+      "sourceRoot": "projects/ng-bs-forms/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "tsConfig": "projects/ng-bs-forms/tsconfig.lib.json",
+            "project": "projects/ng-bs-forms/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/ng-bs-forms/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ng-bs-forms/src/test.ts",
+            "tsConfig": "projects/ng-bs-forms/tsconfig.spec.json",
+            "karmaConfig": "projects/ng-bs-forms/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/ng-bs-forms/tsconfig.lib.json",
+              "projects/ng-bs-forms/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "defaultProject": "ng-bs-forms"
 }
