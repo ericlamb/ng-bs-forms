@@ -1,24 +1,59 @@
-# NgBsForms
+![CI](https://github.com/ericlamb/ng-bs-forms/workflows/CI/badge.svg)
+![npm (scoped)](https://img.shields.io/npm/v/@ericlamb/ng-bs-forms)
 
-This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.9.
+# Angular BootStrap Forms
 
-## Code scaffolding
+Provides components for using Angular Reactive Forms with BootStrap 4.5.
 
-Run `ng generate component component-name --project ng-bs-forms` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module --project ng-bs-forms`.
-> Note: Don't forget to add `--project ng-bs-forms` or else it will be added to the default project in your `angular.json` file. 
+```html
+<form [formGroup]="loginForm" (ngSubmit)="submitForm()">
+  <div class="container">
+    <app-bs-form-field [formField]="userName" [icon]="'user'" [placeholder]="'username (or email)'"
+      name="username" [autoFocus]="true">
+      <app-bs-field-error *ngIf="userName.hasError('required')" [error]="'Username is required.'">
+      </app-bs-field-error>
+    </app-bs-form-field>
+    <app-bs-form-field [formField]="password" [type]="'password'" [icon]="'key'" [placeholder]="'password'"
+      name="password">
+      <app-bs-field-error *ngIf="password.hasError('required')" [error]="'Password is required.'">
+      </app-bs-field-error>
+    </app-bs-form-field>
+  </div>
+  <div class="form-group text-right">
+    <button class="btn btn-primary" (mousedown)="validateForm()">
+      <fa-icon [icon]="['fas', 'sign-in-alt']"></fa-icon> Sign In
+    </button>
+  </div>
+</form>
+```
 
-## Build
+## Text Inputs (`app-bs-form-field`)
 
-Run `ng build ng-bs-forms` to build the project. The build artifacts will be stored in the `dist/` directory.
+```html
+<app-bs-form-field [formField]="userName" [icon]="'user'" [placeholder]="'username (or email)'" label="Username (or Email)" name="username" [autoFocus]="true">
+</app-bs-form-field>
+```
 
-## Publishing
+|Input|Description|
+|:---|:---|
+|`formField`|Form field to bind the contents of the input to.|
+|`placeholder`|Placeholder text to display for an empty input|
+|`icon`|[Font Awesome](https://fontawesome.com/) icon from the [free solid](https://fontawesome.com/icons?d=gallery&s=solid&m=free) icon collection to perpend to the form field.|
+|`name`|Name to apply to the input.|
+|`type`|HTML input type to set the input field to.|
+|`autoFocus`|Input to focus when the control loads. Use once per form.|
+|label|Label to apply to the form field.|
 
-After building your library with `ng build ng-bs-forms`, go to the dist folder `cd dist/ng-bs-forms` and run `npm publish`.
+## Displaying Validation Errors (`app-bs-field-error`)
+To display validation errors add a `app-bs-field-error` under the `app-bs-form-field`. Use an `ngIf` to control when the error is shown. Set the text to display in the `error` input.
 
-## Running unit tests
+### Example
+```html
+<app-bs-field-error *ngIf="password.hasError('required')" [error]="'Password is required.'">
+</app-bs-field-error>
+```
 
-Run `ng test ng-bs-forms` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+### Inputs
+|Input|Description|
+|:---|:---|
+|`error`|The error to display.|
