@@ -12,7 +12,7 @@ jobs:
     - name: Setup node
       uses: actions/setup-node@v1
       with:
-          node-version: '10.x'
+          node-version: '14'
     - name: Restore npm packages
       run: npm install
     - name: Install tslint
@@ -28,7 +28,7 @@ jobs:
     - name: Publish if version has been updated
       if: github.ref == 'refs/heads/master'
       uses: pascalgn/npm-publish-action@1.3.6
-      with: 
+      with:
         create_tag: "true"
         workspace: "./dist/ng-bs-forms"
       env: # More info about the environment variables in the README
